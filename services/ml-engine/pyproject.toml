@@ -1,0 +1,5 @@
+﻿[project]
+name = "neomind-ml-engine"
+version = "0.1.0"
+description = "NEOMIND ML Engine (Python, FastAPI, ML models)."
+requires-python = ">=3.10"

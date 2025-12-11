@@ -1,0 +1,14 @@
+﻿version: "3.9"
+services:
+  core-engine:
+    image: neomind-core-engine
+    ports:
+      - "5100:5100"
+  api-gateway:
+    image: neomind-api-gateway
+    ports:
+      - "5200:5200"
+  frontend:
+    image: neomind-frontend
+    ports:
+      - "3000:3000"

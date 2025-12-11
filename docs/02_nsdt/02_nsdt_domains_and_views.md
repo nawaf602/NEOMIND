@@ -1,0 +1,2 @@
+﻿# NSDT Domains and Views
+

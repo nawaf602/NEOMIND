@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neomind-ml-engine"
+version = "0.1.0"
+description = "NEOMIND ML Engine microservice (skeleton for anomaly detection & risk models)."
+requires-python = ">=3.10"
+
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "httpx",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

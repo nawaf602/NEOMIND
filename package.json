@@ -1,0 +1,25 @@
+{
+  "name": "neomind-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NEOMIND sovereign-grade predictive security and digital-twin platform monorepo.",
+  "main": "index.js",
+  "workspaces": [
+    "services/*",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces",
+    "format": "npm run format --workspaces"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@nestjs/platform-express": "^11.1.9"
+  }
+}

@@ -1,2 +1,9 @@
-﻿/* TODO: theme styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* نكسر الإعداد الافتراضي لتايلويند (النص الأسود) */
+body {
+  color: #f9fafb;        /* نفس var(--nm-fg) */
+  background-color: #041720;
+}

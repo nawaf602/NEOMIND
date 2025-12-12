@@ -1,17 +1,21 @@
 ﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import "../styles/globals.css";
 import { Tajawal } from "next/font/google";
+
+// هنا نستورد ملفات الستايل الحقيقية من مجلد styles
+import "../styles/globals.css";
+import "../styles/theme.css";
 
 const tajawal = Tajawal({
   subsets: ["arabic"],
-  weight: ["400", "500", "700"], // حذفنا 600 لأنه غير متوفر
+  weight: ["400", "500", "700", "800"],
+  variable: "--font-tajawal",
 });
 
 export const metadata: Metadata = {
-  title: "NEOMIND Sovereign Platform",
+  title: "NEOMIND – National Intelligence Grid",
   description:
-    "منصة سيادية للاستبصارات الوطنية والتنبؤ بالمخاطر قبل حدوثها – نسخة تجريبية لعرض قدرات NEOMIND.",
+    "NEOMIND – Sovereign Predictive Platform for national risk intelligence and decision support.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

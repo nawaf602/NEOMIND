@@ -1,77 +1,34 @@
-/* NEOMIND Base Global Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* إعدادات عامة للثيم */
 :root {
-  --nm-bg: #020617;
-  --nm-bg-soft: #020817;
-  --nm-fg: #f9fafb;
-  --nm-accent: #16a34a;   /* Saudi green */
-  --nm-gold: #d4af37;     /* Royal gold */
+  color-scheme: dark;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* جسم الصفحة الأساسي */
+body {
+  @apply bg-slate-950 text-slate-50 antialiased;
 }
 
+/* عشان ما تطلع لنا حواف بيضاء حول الصفحة في بعض المتصفحات */
 html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: var(--nm-bg);
-  color: var(--nm-fg);
 }
 
-/* Make Next.js root fill the screen */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-body > div,
-body > main {
-  flex: 1;
-}
-
-/* Simple global link + button style */
-a {
-  color: var(--nm-accent);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* Basic scrollbars */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--nm-accent) #020617;
-}
-
-*::-webkit-scrollbar {
+/* سكرول أنيق بسيط */
+::-webkit-scrollbar {
   width: 8px;
-  height: 8px;
 }
 
-*::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #020617;
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: var(--nm-accent);
-  border-radius: 999px;
-}
-
-/* Simple page background */
-body {
-  background:
-    radial-gradient(circle at top, #022c22 0, #020617 40%, #000000 100%);
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
 }

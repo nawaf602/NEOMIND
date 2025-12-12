@@ -1,16 +1,18 @@
-﻿{
+{
   "name": "@neomind/simulator",
   "version": "0.1.0",
   "private": true,
-  "description": "NEOMIND data simulator service.",
-  "main": "dist/main.js",
   "scripts": {
+    "dev": "ts-node src/main.ts",
     "start": "node dist/main.js",
-    "start:dev": "ts-node src/main.ts",
-    "build": "tsc -p tsconfig.json",
-    "lint": "echo \"no lint configured yet\"",
-    "test": "echo \"no tests configured yet\""
+    "build": "tsc -p tsconfig.json"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
 }
